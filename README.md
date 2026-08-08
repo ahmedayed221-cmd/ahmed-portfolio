@@ -1,3 +1,51 @@
+# Ahmed's portfolio
+
+Personal site: hero, portfolio, blog, Instagram link, contact. Dark, terminal-inspired design. Next.js (App Router) + TypeScript + Tailwind, deployed on Vercel.
+
+## Editing your identity
+
+Edit `lib/site-config.ts` — name, tagline, email, and **Instagram handle** (currently a placeholder, `yourhandle` — update it before deploying).
+
+## Adding a project
+
+Add a new `.mdx` file to `content/projects/`, e.g. `content/projects/my-app.mdx`:
+
+```mdx
+---
+title: "My App"
+summary: "One-line description."
+tags: ["Tag1", "Tag2"]
+stack: ["Next.js", "Vercel"]
+liveUrl: "https://myapp.com"
+year: "2026"
+status: "Live"
+featured: false
+---
+
+Case study body in Markdown/MDX goes here.
+```
+
+The homepage features whichever project has `featured: true`; `/projects` lists all of them, newest first.
+
+## Adding a blog post
+
+Add a new `.mdx` file to `content/blog/`, e.g. `content/blog/my-post.mdx`:
+
+```mdx
+---
+title: "My Post"
+date: "2026-08-08"
+excerpt: "One-line summary shown in post lists."
+tags: ["Tag1"]
+---
+
+Post body in Markdown/MDX goes here.
+```
+
+Posts sort by `date`, newest first. The two starter posts in `content/blog/` are placeholders — edit or delete them.
+
+---
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
