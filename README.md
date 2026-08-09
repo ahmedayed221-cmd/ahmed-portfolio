@@ -2,6 +2,10 @@
 
 Personal site: hero, portfolio, blog, Instagram link, contact. Dark, terminal-inspired design. Next.js (App Router) + TypeScript + Tailwind, deployed on Vercel.
 
+![Homepage screenshot](docs/screenshot.png)
+
+Live at [ahmed-portfolio-lake-one.vercel.app](https://ahmed-portfolio-lake-one.vercel.app)
+
 ## Editing your identity
 
 Edit `lib/site-config.ts` — name, tagline, email, and **Instagram handle** (currently a placeholder, `yourhandle` — update it before deploying).
