@@ -17,6 +17,13 @@ export type Project = {
   status: string;
   featured: boolean;
   highlights: string[];
+  credibility?: string;
+  screenshot?: {
+    src: string;
+    alt: string;
+    width: number;
+    height: number;
+  };
   content: string;
 };
 
@@ -56,6 +63,8 @@ export function getAllProjects(): Project[] {
       status: data.status,
       featured: Boolean(data.featured),
       highlights: data.highlights ?? [],
+      credibility: data.credibility,
+      screenshot: data.screenshot,
       content,
     }))
     .sort((a, b) => {

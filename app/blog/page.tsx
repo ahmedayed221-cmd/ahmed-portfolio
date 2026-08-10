@@ -13,7 +13,7 @@ export default function BlogPage() {
 
   return (
     <Container className="py-16">
-      <h1 className="text-2xl font-semibold text-foreground">Blog</h1>
+      <h1 className="text-3xl font-semibold tracking-tight text-foreground">Blog</h1>
       <p className="mt-2 max-w-xl text-sm text-muted">
         My vibe coding journey — process notes, tips, and what I&apos;m building.
       </p>

@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import { Container } from "@/components/layout/Container";
 import { Tag } from "@/components/ui/Tag";
+import { BrowserFrame } from "@/components/sections/BrowserFrame";
 import { getAllProjects, getProjectBySlug } from "@/lib/content";
 
 export function generateStaticParams() {
@@ -33,10 +34,17 @@ export default async function ProjectPage({
     <Container className="py-16">
       <div className="mb-8">
         <div className="flex items-center gap-3">
-          <h1 className="text-2xl font-semibold text-foreground">{project.title}</h1>
+          <h1 className="text-3xl font-semibold tracking-tight text-foreground">{project.title}</h1>
           <span className="font-mono text-xs text-accent">{project.status}</span>
         </div>
         <p className="mt-2 max-w-xl text-sm text-muted">{project.summary}</p>
+
+        {project.credibility && (
+          <p className="mt-3 flex items-center gap-2 font-mono text-xs text-accent">
+            <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
+            {project.credibility}
+          </p>
+        )}
 
         <div className="mt-5 flex flex-wrap gap-2">
           {project.tags.map((tag) => (
@@ -58,6 +66,18 @@ export default async function ProjectPage({
           <span className="text-muted">{project.stack.join(" · ")}</span>
         </div>
       </div>
+
+      {project.screenshot && (
+        <div className="mb-12">
+          <BrowserFrame
+            src={project.screenshot.src}
+            alt={project.screenshot.alt}
+            width={project.screenshot.width}
+            height={project.screenshot.height}
+            url={project.liveUrl ? project.liveUrl.replace(/^https?:\/\//, "") : project.title}
+          />
+        </div>
+      )}
 
       {project.highlights.length > 0 && (
         <div className="mb-12 rounded-lg border border-border bg-surface p-6">

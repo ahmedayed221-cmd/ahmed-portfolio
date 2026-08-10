@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <Container className="py-16">
-      <h1 className="text-2xl font-semibold text-foreground">Get in touch</h1>
+      <h1 className="text-3xl font-semibold tracking-tight text-foreground">Get in touch</h1>
       <p className="mt-3 max-w-md text-sm leading-relaxed text-muted">
         Building something, hiring, or just want to talk about vibe coding? Email is the fastest way to
         reach me.

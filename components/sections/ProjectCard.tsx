@@ -14,6 +14,9 @@ export function ProjectCard({ project }: { project: Project }) {
             <span className="font-mono text-xs text-accent">{project.status}</span>
           </div>
           <p className="text-sm leading-relaxed text-muted">{project.summary}</p>
+          {project.credibility && (
+            <p className="mt-2 font-mono text-xs text-accent">{project.credibility}</p>
+          )}
         </div>
         <span className="shrink-0 font-mono text-xs text-muted">{project.year}</span>
       </div>

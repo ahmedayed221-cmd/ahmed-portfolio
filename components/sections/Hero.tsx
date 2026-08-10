@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Button } from "@/components/ui/Button";
 import { TerminalPreview } from "@/components/sections/TerminalPreview";
 import { siteConfig } from "@/lib/site-config";
@@ -37,11 +38,21 @@ export function Hero() {
             </a>
             , an invoice generator for French freelancers.
           </p>
-          <div className="load-in mt-9 flex flex-wrap gap-3" style={{ animationDelay: "400ms" }}>
-            <Button href="/projects">See my work</Button>
-            <Button href="/about" variant="ghost">
-              How I build
+          <div className="load-in mt-9 flex flex-wrap items-center gap-4" style={{ animationDelay: "400ms" }}>
+            <Button href="https://invomly.com" external>
+              Try Invomly ↗
             </Button>
+            <Button href="/contact" variant="ghost">
+              Get in touch
+            </Button>
+          </div>
+          <div className="load-in mt-5" style={{ animationDelay: "460ms" }}>
+            <Link
+              href="/projects"
+              className="text-sm text-muted underline decoration-border underline-offset-4 transition-colors hover:text-foreground hover:decoration-accent"
+            >
+              See all my work →
+            </Link>
           </div>
         </div>
         <div className="load-in" style={{ animationDelay: "180ms" }}>

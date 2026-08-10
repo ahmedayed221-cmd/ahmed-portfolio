@@ -14,7 +14,7 @@ export default function ProjectsPage() {
 
   return (
     <Container className="py-16">
-      <h1 className="text-2xl font-semibold text-foreground">Work</h1>
+      <h1 className="text-3xl font-semibold tracking-tight text-foreground">Work</h1>
       <p className="mt-2 max-w-xl text-sm text-muted">
         Products I&apos;ve designed, built, and shipped by pairing with Claude Code.
       </p>

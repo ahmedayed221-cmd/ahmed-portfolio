@@ -10,13 +10,13 @@ export function TerminalPreview() {
         <p className="text-accent">
           <span className="typewriter">$ vibe-coding invomly</span>
         </p>
-        <p className="terminal-line pl-4" style={{ animationDelay: "1.3s" }}>
+        <p className="terminal-line pl-4" style={{ animationDelay: "0.75s" }}>
           &gt; invoice generator for French freelancers
         </p>
-        <p className="terminal-line pl-4" style={{ animationDelay: "1.7s" }}>
+        <p className="terminal-line pl-4" style={{ animationDelay: "0.95s" }}>
           &gt; describe, generate, review, ship
         </p>
-        <p className="terminal-line pl-4 text-foreground" style={{ animationDelay: "2.1s" }}>
+        <p className="terminal-line pl-4 text-foreground" style={{ animationDelay: "1.15s" }}>
           ✓ deployed → invomly.com
         </p>
       </div>

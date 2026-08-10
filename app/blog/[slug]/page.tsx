@@ -44,7 +44,7 @@ export default async function BlogPostPage({
           <span>·</span>
           <span>{post.readingTime}</span>
         </div>
-        <h1 className="mt-3 text-2xl font-semibold text-foreground">{post.title}</h1>
+        <h1 className="mt-3 text-3xl font-semibold tracking-tight text-foreground">{post.title}</h1>
       </div>
 
       <div className="mdx-content">
