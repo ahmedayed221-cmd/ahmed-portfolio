@@ -35,6 +35,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-background text-foreground">
+        <div className="site-grid" aria-hidden="true" />
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />

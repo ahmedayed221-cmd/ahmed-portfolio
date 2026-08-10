@@ -7,12 +7,18 @@ export function TerminalPreview() {
         <span className="h-2.5 w-2.5 rounded-full bg-border" />
       </div>
       <div className="space-y-2 px-4 py-5 text-muted">
-        <p>
-          <span className="text-accent">$</span> vibe-coding invomly
+        <p className="text-accent">
+          <span className="typewriter">$ vibe-coding invomly</span>
         </p>
-        <p className="pl-4">&gt; invoice generator for French freelancers</p>
-        <p className="pl-4">&gt; describe, generate, review, ship</p>
-        <p className="pl-4 text-foreground">✓ deployed → invomly.com</p>
+        <p className="terminal-line pl-4" style={{ animationDelay: "1.3s" }}>
+          &gt; invoice generator for French freelancers
+        </p>
+        <p className="terminal-line pl-4" style={{ animationDelay: "1.7s" }}>
+          &gt; describe, generate, review, ship
+        </p>
+        <p className="terminal-line pl-4 text-foreground" style={{ animationDelay: "2.1s" }}>
+          ✓ deployed → invomly.com
+        </p>
       </div>
     </div>
   );

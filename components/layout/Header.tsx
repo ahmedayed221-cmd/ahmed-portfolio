@@ -24,7 +24,7 @@ export function Header() {
             target="_blank"
             rel="noreferrer"
             aria-label="Instagram"
-            className="text-muted transition-colors hover:text-foreground"
+            className="text-muted transition-all duration-200 hover:scale-110 hover:text-foreground"
           >
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
               <rect x="3" y="3" width="18" height="18" rx="5" />

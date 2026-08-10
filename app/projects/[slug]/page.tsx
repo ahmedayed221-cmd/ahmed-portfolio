@@ -59,6 +59,20 @@ export default async function ProjectPage({
         </div>
       </div>
 
+      {project.highlights.length > 0 && (
+        <div className="mb-12 rounded-lg border border-border bg-surface p-6">
+          <p className="font-mono text-xs uppercase tracking-wider text-muted">What&apos;s built in</p>
+          <ul className="mt-4 grid gap-x-6 gap-y-3 sm:grid-cols-2">
+            {project.highlights.map((highlight) => (
+              <li key={highlight} className="flex items-start gap-2 text-sm text-foreground">
+                <span className="mt-0.5 text-accent">✓</span>
+                {highlight}
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+
       <div className="mdx-content">
         <MDXRemote source={project.content} />
       </div>

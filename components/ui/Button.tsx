@@ -10,11 +10,11 @@ type ButtonProps = {
 
 export function Button({ href, children, variant = "primary", external = false }: ButtonProps) {
   const base =
-    "inline-flex items-center gap-2 rounded-md px-4 py-2.5 text-sm font-medium transition-colors";
+    "inline-flex items-center gap-2 rounded-md px-4 py-2.5 text-sm font-medium transition-all duration-200 hover:-translate-y-0.5";
   const styles =
     variant === "primary"
-      ? "bg-accent text-white hover:opacity-90"
-      : "border border-border text-foreground hover:bg-surface";
+      ? "bg-accent text-white shadow-[0_0_0_0_rgba(124,108,246,0)] hover:shadow-[0_8px_24px_-8px_rgba(124,108,246,0.6)] hover:opacity-95"
+      : "border border-border text-foreground hover:border-border-hover hover:bg-surface";
 
   if (external) {
     return (

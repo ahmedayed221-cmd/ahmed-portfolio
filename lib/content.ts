@@ -16,6 +16,7 @@ export type Project = {
   year: string;
   status: string;
   featured: boolean;
+  highlights: string[];
   content: string;
 };
 
@@ -54,6 +55,7 @@ export function getAllProjects(): Project[] {
       year: data.year,
       status: data.status,
       featured: Boolean(data.featured),
+      highlights: data.highlights ?? [],
       content,
     }))
     .sort((a, b) => {

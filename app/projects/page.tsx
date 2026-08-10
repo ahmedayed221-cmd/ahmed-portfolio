@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Container } from "@/components/layout/Container";
 import { ProjectCard } from "@/components/sections/ProjectCard";
+import { ComingSoonCard } from "@/components/sections/ComingSoonCard";
 import { getAllProjects } from "@/lib/content";
 
 export const metadata: Metadata = {
@@ -21,6 +22,7 @@ export default function ProjectsPage() {
         {projects.map((project) => (
           <ProjectCard key={project.slug} project={project} />
         ))}
+        <ComingSoonCard />
       </div>
     </Container>
   );
