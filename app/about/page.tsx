@@ -6,7 +6,7 @@ import { siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
   title: "About",
-  description: `How ${siteConfig.name} got into vibe coding, what he builds, and how the process actually works.`,
+  description: `How ${siteConfig.shortName} got into vibe coding, what he builds, and how the process actually works.`,
 };
 
 const facts = [

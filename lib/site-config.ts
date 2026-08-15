@@ -1,5 +1,6 @@
 export const siteConfig = {
-  name: "Ahmed",
+  name: "Ahmed.Ibrahim Vibe Coding",
+  shortName: "Ahmed.Ibrahim",
   role: "Developer",
   tagline: "I build and ship real products by vibe coding with Claude Code.",
   email: "ahmedibrahimfr1@gmail.com",

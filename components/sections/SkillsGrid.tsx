@@ -1,3 +1,4 @@
+import { HudFrame } from "@/components/ui/HudFrame";
 import { Tag } from "@/components/ui/Tag";
 import { skillCategories } from "@/lib/skills";
 import { getTechIcon } from "@/lib/tech-icons";
@@ -6,7 +7,7 @@ export function SkillsGrid() {
   return (
     <div className="grid gap-6 sm:grid-cols-2">
       {skillCategories.map((group) => (
-        <div
+        <HudFrame
           key={group.category}
           className="rounded-lg border border-border bg-surface p-6 transition-colors duration-300 hover:border-border-hover"
         >
@@ -36,7 +37,7 @@ export function SkillsGrid() {
               );
             })}
           </div>
-        </div>
+        </HudFrame>
       ))}
     </div>
   );

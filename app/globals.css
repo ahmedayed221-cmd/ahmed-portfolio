@@ -41,15 +41,47 @@ body {
   color: var(--foreground);
 }
 
-/* Fixed, subtle dot-grid backdrop across the whole site */
+/* Fixed circuit-line grid backdrop, with a slow radar-style scan sweep */
 .site-grid {
   position: fixed;
   inset: 0;
   z-index: -10;
+  overflow: hidden;
   pointer-events: none;
-  background-image: radial-gradient(circle, rgba(232, 233, 236, 0.06) 1px, transparent 1px);
-  background-size: 28px 28px;
+  background-image:
+    linear-gradient(rgba(124, 108, 246, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(124, 108, 246, 0.08) 1px, transparent 1px);
+  background-size: 56px 56px;
   mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, black 40%, transparent 90%);
+}
+
+.site-grid::after {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 32vh;
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    rgba(124, 108, 246, 0.1) 45%,
+    rgba(124, 108, 246, 0.16) 50%,
+    rgba(124, 108, 246, 0.1) 55%,
+    transparent 100%
+  );
+  transform: translateY(-100%);
+  animation: scan-sweep 10s ease-in-out infinite;
+}
+
+@keyframes scan-sweep {
+  0% {
+    transform: translateY(-100%);
+  }
+  50% {
+    transform: translateY(220vh);
+  }
+  100% {
+    transform: translateY(220vh);
+  }
 }
 
 /* Soft accent glow, positioned per-use behind hero-style content */
@@ -116,6 +148,69 @@ body {
   animation: fade-up 0.45s ease-out forwards;
 }
 
+/* ---- HUD corner brackets + scan-line reveal, used by HudFrame ---- */
+
+.hud-corner {
+  opacity: 0.4;
+  transform: scale(0.85);
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+
+.hud-frame:hover .hud-corner {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.reveal .hud-corner {
+  opacity: 0;
+  transform: scale(0.4);
+}
+
+.reveal.is-visible .hud-corner {
+  animation: hud-corner-snap 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: 0.1s;
+}
+
+@keyframes hud-corner-snap {
+  0% {
+    opacity: 0;
+    transform: scale(0.4);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.15);
+  }
+  100% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+}
+
+.hud-scan::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: 45%;
+  background: linear-gradient(90deg, transparent, rgba(124, 108, 246, 0.35), transparent);
+  transform: translateX(-160%);
+}
+
+.reveal.is-visible .hud-scan::before {
+  animation: hud-scan-sweep 0.85s ease-out 1;
+  animation-delay: 0.05s;
+}
+
+@keyframes hud-scan-sweep {
+  from {
+    transform: translateX(-160%);
+  }
+  to {
+    transform: translateX(320%);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .reveal,
   .reveal.is-visible,
@@ -125,6 +220,29 @@ body {
     opacity: 1 !important;
     width: auto !important;
     border-right: none !important;
+  }
+
+  .site-grid::after {
+    display: none;
+  }
+
+  .hud-corner {
+    opacity: 1 !important;
+    transform: scale(1) !important;
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .hud-scan::before {
+    display: none !important;
+  }
+
+  .scan-sweep-once::before {
+    display: none !important;
+  }
+
+  .animate-pulse {
+    animation: none !important;
   }
 }
 

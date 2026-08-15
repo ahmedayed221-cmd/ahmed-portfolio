@@ -13,7 +13,7 @@ export function Hero() {
       <div className="mx-auto grid w-full max-w-5xl gap-14 px-6 py-24 md:grid-cols-[1.1fr_1fr] md:items-center md:py-32">
         <div>
           <p className="load-in mb-5 font-mono text-xs uppercase tracking-wider text-accent">
-            Vibe coding developer
+            {siteConfig.name}
           </p>
           <h1
             className="load-in text-4xl font-semibold leading-[1.1] tracking-tight text-foreground sm:text-5xl"
@@ -25,7 +25,7 @@ export function Hero() {
             className="load-in mt-6 max-w-lg text-base leading-relaxed text-muted"
             style={{ animationDelay: "260ms" }}
           >
-            I&apos;m {siteConfig.name} — I design, build, and ship apps using Claude Code: describing what I want,
+            I&apos;m {siteConfig.shortName} — I design, build, and ship apps using Claude Code: describing what I want,
             reviewing every change, and moving from idea to production in days, not months. First shipped
             product:{" "}
             <a

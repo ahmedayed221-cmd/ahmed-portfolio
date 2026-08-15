@@ -1,3 +1,4 @@
+import { HudCorners } from "@/components/ui/HudFrame";
 import { siteConfig } from "@/lib/site-config";
 
 export function InstagramCallout() {
@@ -6,8 +7,9 @@ export function InstagramCallout() {
       href={`https://instagram.com/${siteConfig.instagramHandle}`}
       target="_blank"
       rel="noreferrer"
-      className="group flex items-start justify-between gap-4 rounded-lg border border-border bg-surface p-6 transition-all duration-300 hover:-translate-y-1 hover:border-border-hover hover:bg-surface-hover hover:shadow-[0_16px_40px_-24px_rgba(124,108,246,0.5)]"
+      className="hud-frame group relative flex items-start justify-between gap-4 rounded-lg border border-border bg-surface p-6 transition-all duration-300 hover:-translate-y-1 hover:border-border-hover hover:bg-surface-hover hover:shadow-[0_16px_40px_-24px_rgba(124,108,246,0.5)]"
     >
+      <HudCorners />
       <div>
         <p className="font-mono text-xs uppercase tracking-wider text-accent">Follow along</p>
         <p className="mt-2 text-base text-foreground">

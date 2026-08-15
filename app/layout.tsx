@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { SceneBackground } from "@/components/three/SceneBackground";
 import { siteConfig } from "@/lib/site-config";
 import "./globals.css";
 
@@ -30,7 +31,7 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1600,
         height: 1000,
-        alt: `${siteConfig.name}'s portfolio homepage`,
+        alt: `${siteConfig.shortName}'s portfolio homepage`,
       },
     ],
   },
@@ -44,6 +45,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     >
       <body className="min-h-full flex flex-col bg-background text-foreground">
         <div className="site-grid" aria-hidden="true" />
+        <SceneBackground />
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />

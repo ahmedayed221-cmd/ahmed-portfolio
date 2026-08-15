@@ -6,8 +6,14 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-background/80 backdrop-blur">
       <Container className="flex h-16 items-center justify-between">
-        <Link href="/" className="font-mono text-sm text-foreground">
-          {siteConfig.name.toLowerCase()}<span className="text-accent">.</span>
+        <Link href="/" className="group flex items-center gap-2 font-mono text-sm text-foreground">
+          <span>
+            {siteConfig.shortName}
+            <span className="text-accent">.</span>
+          </span>
+          <span className="hidden rounded border border-border px-1.5 py-0.5 text-[10px] uppercase tracking-widest text-muted transition-colors duration-200 group-hover:border-accent group-hover:text-accent sm:inline">
+            Vibe Coding
+          </span>
         </Link>
         <nav className="flex items-center gap-6">
           {navLinks.map((link) => (

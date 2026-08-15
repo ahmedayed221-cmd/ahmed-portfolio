@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { HudFrame } from "@/components/ui/HudFrame";
 
 export function BrowserFrame({
   src,
@@ -14,7 +15,7 @@ export function BrowserFrame({
   height: number;
 }) {
   return (
-    <div className="overflow-hidden rounded-lg border border-border bg-surface shadow-2xl shadow-black/40">
+    <HudFrame className="overflow-hidden rounded-lg border border-border bg-surface shadow-2xl shadow-black/40">
       <div className="flex items-center gap-3 border-b border-border px-4 py-3">
         <div className="flex gap-1.5">
           <span className="h-2.5 w-2.5 rounded-full bg-border" />
@@ -33,6 +34,6 @@ export function BrowserFrame({
         className="w-full"
         sizes="(min-width: 1024px) 800px, 100vw"
       />
-    </div>
+    </HudFrame>
   );
 }

@@ -6,7 +6,7 @@ export function Footer() {
     <footer className="border-t border-border">
       <Container className="flex flex-col items-start justify-between gap-4 py-10 sm:flex-row sm:items-center">
         <p className="text-sm text-muted">
-          © {new Date().getFullYear()} {siteConfig.name}. Built by vibe coding.
+          © {new Date().getFullYear()} {siteConfig.name}.
         </p>
         <div className="flex items-center gap-5 text-sm text-muted">
           <a href={`mailto:${siteConfig.email}`} className="transition-colors hover:text-foreground">

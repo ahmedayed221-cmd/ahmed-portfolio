@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { HudCorners } from "@/components/ui/HudFrame";
 import type { Post } from "@/lib/content";
 
 function formatDate(date: string) {
@@ -13,8 +14,9 @@ export function BlogCard({ post }: { post: Post }) {
   return (
     <Link
       href={`/blog/${post.slug}`}
-      className="group block rounded-lg border border-border bg-surface p-6 transition-all duration-300 hover:-translate-y-1 hover:border-border-hover hover:bg-surface-hover hover:shadow-[0_16px_40px_-24px_rgba(124,108,246,0.5)]"
+      className="hud-frame group relative block rounded-lg border border-border bg-surface p-6 transition-all duration-300 hover:-translate-y-1 hover:border-border-hover hover:bg-surface-hover hover:shadow-[0_16px_40px_-24px_rgba(124,108,246,0.5)]"
     >
+      <HudCorners />
       <div className="mb-2 flex items-center gap-3 font-mono text-xs text-muted">
         <span>{formatDate(post.date)}</span>
         <span>·</span>

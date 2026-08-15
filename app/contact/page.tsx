@@ -5,7 +5,7 @@ import { siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
   title: "Contact",
-  description: `Get in touch with ${siteConfig.name}.`,
+  description: `Get in touch with ${siteConfig.shortName}.`,
 };
 
 export default function ContactPage() {

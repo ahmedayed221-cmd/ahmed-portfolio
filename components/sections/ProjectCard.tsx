@@ -1,11 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
+import { HudFrame } from "@/components/ui/HudFrame";
 import { Tag } from "@/components/ui/Tag";
 import type { Project } from "@/lib/content";
 
 export function ProjectCard({ project }: { project: Project }) {
   return (
-    <div className="group rounded-lg border border-border bg-surface p-6 transition-all duration-300 hover:-translate-y-1 hover:border-border-hover hover:bg-surface-hover hover:shadow-[0_16px_40px_-24px_rgba(124,108,246,0.5)]">
+    <HudFrame className="group rounded-lg border border-border bg-surface p-6 transition-all duration-300 hover:-translate-y-1 hover:border-border-hover hover:bg-surface-hover hover:shadow-[0_16px_40px_-24px_rgba(124,108,246,0.5)]">
       {project.screenshot && (
         <Link
           href={`/projects/${project.slug}`}
@@ -69,6 +70,6 @@ export function ProjectCard({ project }: { project: Project }) {
           </a>
         )}
       </div>
-    </div>
+    </HudFrame>
   );
 }

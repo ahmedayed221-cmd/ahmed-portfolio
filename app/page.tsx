@@ -7,6 +7,7 @@ import { ComingSoonCard } from "@/components/sections/ComingSoonCard";
 import { SkillsGrid } from "@/components/sections/SkillsGrid";
 import { BlogCard } from "@/components/sections/BlogCard";
 import { InstagramCallout } from "@/components/sections/InstagramCallout";
+import { HudDivider } from "@/components/ui/HudDivider";
 import { getAllProjects, getAllPosts } from "@/lib/content";
 
 export default function Home() {
@@ -32,7 +33,8 @@ export default function Home() {
         </Reveal>
       </Container>
 
-      <Container className="border-t border-border py-16">
+      <HudDivider />
+      <Container className="py-16">
         <Reveal>
           <h2 className="mb-6 text-sm font-mono uppercase tracking-wider text-muted">Stack & tools</h2>
         </Reveal>
@@ -41,7 +43,8 @@ export default function Home() {
         </Reveal>
       </Container>
 
-      <Container className="border-t border-border py-16">
+      <HudDivider />
+      <Container className="py-16">
         <Reveal>
           <div className="mb-6 flex items-baseline justify-between">
             <h2 className="text-sm font-mono uppercase tracking-wider text-muted">Latest writing</h2>
@@ -59,7 +62,8 @@ export default function Home() {
         </div>
       </Container>
 
-      <Container className="border-t border-border py-16">
+      <HudDivider />
+      <Container className="py-16">
         <Reveal>
           <InstagramCallout />
         </Reveal>

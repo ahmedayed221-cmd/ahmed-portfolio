@@ -1,4 +1,4 @@
-# Ahmed's portfolio
+# Ahmed.Ibrahim Vibe Coding — portfolio
 
 Personal site: hero, portfolio, blog, Instagram link, contact. Dark, terminal-inspired design. Next.js (App Router) + TypeScript + Tailwind, deployed on Vercel.
 
