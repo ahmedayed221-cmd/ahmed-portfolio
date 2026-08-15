@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Container } from "@/components/layout/Container";
 import { Reveal } from "@/components/motion/Reveal";
+import { ProcessSteps } from "@/components/sections/ProcessSteps";
 import { siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
@@ -12,7 +13,6 @@ const facts = [
   { label: "Primary tool", value: "Claude Code" },
   { label: "Shipped", value: "Invomly — invomly.com" },
   { label: "Stack", value: "Next.js, TypeScript, Vercel" },
-  { label: "Process", value: "Describe → generate → review → ship" },
 ];
 
 export default function AboutPage() {
@@ -42,6 +42,15 @@ export default function AboutPage() {
                 spending almost all of my attention on the decisions that actually matter: what the product
                 should do, how it should feel, and where it needs to be exactly right.
               </p>
+            </section>
+          </Reveal>
+
+          <Reveal>
+            <section>
+              <h2 className="font-mono text-sm uppercase tracking-wider text-muted">How it actually works</h2>
+              <div className="mt-4 max-w-2xl">
+                <ProcessSteps />
+              </div>
             </section>
           </Reveal>
 

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { Tag } from "@/components/ui/Tag";
 import type { Project } from "@/lib/content";
@@ -5,6 +6,21 @@ import type { Project } from "@/lib/content";
 export function ProjectCard({ project }: { project: Project }) {
   return (
     <div className="group rounded-lg border border-border bg-surface p-6 transition-all duration-300 hover:-translate-y-1 hover:border-border-hover hover:bg-surface-hover hover:shadow-[0_16px_40px_-24px_rgba(124,108,246,0.5)]">
+      {project.screenshot && (
+        <Link
+          href={`/projects/${project.slug}`}
+          className="mb-5 block overflow-hidden rounded-md border border-border"
+        >
+          <Image
+            src={project.screenshot.src}
+            alt={project.screenshot.alt}
+            width={project.screenshot.width}
+            height={project.screenshot.height}
+            className="h-44 w-full object-cover object-top transition-transform duration-300 group-hover:scale-[1.03] sm:h-52"
+            sizes="(min-width: 1024px) 700px, 100vw"
+          />
+        </Link>
+      )}
       <div className="flex items-start justify-between gap-4">
         <div>
           <div className="mb-1 flex items-center gap-2">

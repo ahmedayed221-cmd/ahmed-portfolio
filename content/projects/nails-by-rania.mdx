@@ -1,0 +1,52 @@
+---
+title: "Nails by Rania"
+summary: "A 3D interactive nail art studio site — Three.js hero, HUD-styled gallery, and full French/English/Arabic support with native RTL."
+tags: ["Three.js", "3D/WebGL", "Local business"]
+stack: ["React", "Vite", "Three.js"]
+liveUrl: "https://nailsbyrania.online"
+year: "2026"
+status: "Live"
+featured: false
+credibility: "Live site · Built solo · Real client"
+highlights:
+  - "3D interactive Three.js hero"
+  - "HUD/sci-fi styled gallery with scroll effects"
+  - "Trilingual: French, English, Arabic"
+  - "Full RTL layout for Arabic"
+---
+
+## The problem
+
+A nail art business lives and dies on how the work looks — so the site had to feel as crafted as the
+manicures themselves, not another templated local-business page. On top of that, the target audience spans
+three languages, including Arabic, which most small-business site builders treat as an afterthought: mirrored
+CSS instead of a real right-to-left layout.
+
+## What's actually built
+
+- **3D interactive hero** — a Three.js scene as the first thing visitors see, instead of a static banner
+  image.
+- **HUD/sci-fi styled gallery** — the nail art portfolio is presented in a gallery with scroll-driven effects,
+  styled like a heads-up display rather than a plain image grid.
+- **Trilingual content** — French, English, and Arabic, covering the actual language mix of the client's
+  clientele.
+- **Native RTL layout** — Arabic isn't just mirrored with CSS transforms; layout, spacing, and reading order
+  follow real right-to-left logic throughout the site.
+
+## Approach
+
+Built with Claude Code, the same describe → generate → review loop as everything else I ship. The gallery's
+scroll effects and the 3D hero went through the most visual back-and-forth — those are the kind of details you
+have to actually look at to get right, prompt or no prompt. The RTL layout got the most manual scrutiny of
+anything on the site: it's easy to get an Arabic layout "visually close enough" and still have it be wrong in
+ways a French or English speaker wouldn't catch.
+
+## Stack
+
+React and Vite, with Three.js driving the 3D hero and scroll-based gallery effects — a lighter, framework-free
+setup than Invomly's, since this is a marketing/portfolio site rather than an app with accounts and billing.
+
+## Result
+
+Live at [nailsbyrania.online](https://nailsbyrania.online), built for a family member's real nail art
+business.

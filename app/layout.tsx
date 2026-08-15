@@ -25,6 +25,14 @@ export const metadata: Metadata = {
     url: siteConfig.siteUrl,
     siteName: siteConfig.name,
     type: "website",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1600,
+        height: 1000,
+        alt: `${siteConfig.name}'s portfolio homepage`,
+      },
+    ],
   },
 };
 
