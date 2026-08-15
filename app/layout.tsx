@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { BottomNav } from "@/components/layout/BottomNav";
 import { SceneBackground } from "@/components/three/SceneBackground";
 import { siteConfig } from "@/lib/site-config";
 import "./globals.css";
@@ -43,12 +44,13 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-background text-foreground">
+      <body className="min-h-full flex flex-col bg-background text-foreground pb-24 sm:pb-20">
         <div className="site-grid" aria-hidden="true" />
         <SceneBackground />
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
+        <BottomNav />
       </body>
     </html>
   );

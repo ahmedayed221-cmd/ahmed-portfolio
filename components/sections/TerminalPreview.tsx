@@ -7,13 +7,13 @@ export function TerminalPreview() {
         <span className="h-2.5 w-2.5 rounded-full bg-border" />
         <span className="h-2.5 w-2.5 rounded-full bg-border" />
         <span className="h-2.5 w-2.5 rounded-full bg-border" />
-        <span className="ml-auto flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-widest text-accent">
+        <span className="ml-auto flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-widest text-accent-text">
           <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-accent" />
           Live
         </span>
       </div>
       <div className="space-y-2 px-4 py-5 text-muted">
-        <p className="text-accent">
+        <p className="text-accent-text">
           <span className="typewriter">$ vibe-coding invomly</span>
         </p>
         <p className="terminal-line pl-4" style={{ animationDelay: "0.75s" }}>

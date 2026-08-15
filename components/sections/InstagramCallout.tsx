@@ -11,7 +11,7 @@ export function InstagramCallout() {
     >
       <HudCorners />
       <div>
-        <p className="font-mono text-xs uppercase tracking-wider text-accent">Follow along</p>
+        <p className="font-mono text-xs uppercase tracking-wider text-accent-text">Follow along</p>
         <p className="mt-2 text-base text-foreground">
           Behind-the-scenes builds and process on Instagram — @{siteConfig.instagramHandle}
         </p>

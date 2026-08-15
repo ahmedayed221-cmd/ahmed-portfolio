@@ -37,12 +37,12 @@ export function Scene({ isMobile, active }: { isMobile: boolean; active: boolean
         scale={[7, 5, 4]}
         size={1.6}
         speed={0.25}
-        opacity={0.55}
+        opacity={0.4}
         color="#7c6cf6"
       />
       {!isMobile && (
         <EffectComposer multisampling={0}>
-          <Bloom luminanceThreshold={0.15} luminanceSmoothing={0.9} intensity={0.9} mipmapBlur />
+          <Bloom luminanceThreshold={0.2} luminanceSmoothing={0.9} intensity={0.65} mipmapBlur />
         </EffectComposer>
       )}
     </Canvas>

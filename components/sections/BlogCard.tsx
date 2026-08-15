@@ -22,7 +22,7 @@ export function BlogCard({ post }: { post: Post }) {
         <span>·</span>
         <span>{post.readingTime}</span>
       </div>
-      <h3 className="text-lg font-semibold text-foreground transition-colors group-hover:text-accent">
+      <h3 className="text-lg font-semibold text-foreground transition-colors group-hover:text-accent-text">
         {post.title}
       </h3>
       <p className="mt-2 text-sm leading-relaxed text-muted">{post.excerpt}</p>
