@@ -5,7 +5,7 @@ export const siteConfig = {
   tagline: "I build and ship real products by vibe coding with Claude Code.",
   email: "ahmedibrahimfr1@gmail.com",
   instagramHandle: "ahmedayed262",
-  siteUrl: "https://ahmed-portfolio-lake-one.vercel.app",
+  siteUrl: "https://www.ahmedvibecoding.codes",
 };
 
 export const navLinks = [
