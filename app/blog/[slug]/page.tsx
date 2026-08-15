@@ -38,7 +38,7 @@ export default async function BlogPostPage({
 
   return (
     <Container className="py-16">
-      <div className="mb-8">
+      <div className="text-scrim mb-8">
         <div className="flex items-center gap-3 font-mono text-xs text-muted">
           <span>{formatDate(post.date)}</span>
           <span>·</span>
@@ -47,7 +47,7 @@ export default async function BlogPostPage({
         <h1 className="mt-3 text-3xl font-semibold tracking-tight text-foreground">{post.title}</h1>
       </div>
 
-      <div className="mdx-content">
+      <div className="text-scrim mdx-content">
         <MDXRemote source={post.content} />
       </div>
     </Container>

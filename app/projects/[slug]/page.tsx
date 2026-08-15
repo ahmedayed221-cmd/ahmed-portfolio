@@ -32,15 +32,15 @@ export default async function ProjectPage({
 
   return (
     <Container className="py-16">
-      <div className="mb-8">
+      <div className="text-scrim mb-8">
         <div className="flex items-center gap-3">
           <h1 className="text-3xl font-semibold tracking-tight text-foreground">{project.title}</h1>
-          <span className="font-mono text-xs text-accent">{project.status}</span>
+          <span className="font-mono text-xs text-accent-text">{project.status}</span>
         </div>
         <p className="mt-2 max-w-xl text-sm text-muted">{project.summary}</p>
 
         {project.credibility && (
-          <p className="mt-3 flex items-center gap-2 font-mono text-xs text-accent">
+          <p className="mt-3 flex items-center gap-2 font-mono text-xs text-accent-text">
             <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
             {project.credibility}
           </p>
@@ -85,7 +85,7 @@ export default async function ProjectPage({
           <ul className="mt-4 grid gap-x-6 gap-y-3 sm:grid-cols-2">
             {project.highlights.map((highlight) => (
               <li key={highlight} className="flex items-start gap-2 text-sm text-foreground">
-                <span className="mt-0.5 text-accent">✓</span>
+                <span className="mt-0.5 text-accent-text">✓</span>
                 {highlight}
               </li>
             ))}
@@ -93,7 +93,7 @@ export default async function ProjectPage({
         </div>
       )}
 
-      <div className="mdx-content">
+      <div className="text-scrim mdx-content">
         <MDXRemote source={project.content} />
       </div>
     </Container>

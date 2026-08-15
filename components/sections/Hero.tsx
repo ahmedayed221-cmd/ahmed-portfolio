@@ -11,8 +11,8 @@ export function Hero() {
         aria-hidden="true"
       />
       <div className="mx-auto grid w-full max-w-5xl gap-14 px-6 py-24 md:grid-cols-[1.1fr_1fr] md:items-center md:py-32">
-        <div>
-          <p className="load-in mb-5 font-mono text-xs uppercase tracking-wider text-accent">
+        <div className="text-scrim">
+          <p className="load-in mb-5 font-mono text-xs uppercase tracking-wider text-accent-text">
             {siteConfig.name}
           </p>
           <h1
@@ -32,7 +32,7 @@ export function Hero() {
               href="https://invomly.com"
               target="_blank"
               rel="noreferrer"
-              className="text-foreground underline decoration-accent underline-offset-4 transition-colors hover:text-accent"
+              className="text-foreground underline decoration-accent underline-offset-4 transition-colors hover:text-accent-text"
             >
               Invomly
             </a>

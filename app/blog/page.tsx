@@ -13,10 +13,12 @@ export default function BlogPage() {
 
   return (
     <Container className="py-16">
-      <h1 className="text-3xl font-semibold tracking-tight text-foreground">Blog</h1>
-      <p className="mt-2 max-w-xl text-sm text-muted">
-        My vibe coding journey — process notes, tips, and what I&apos;m building.
-      </p>
+      <div className="text-scrim">
+        <h1 className="text-3xl font-semibold tracking-tight text-foreground">Blog</h1>
+        <p className="mt-2 max-w-xl text-sm text-muted">
+          My vibe coding journey — process notes, tips, and what I&apos;m building.
+        </p>
+      </div>
       <div className="mt-10 grid gap-4 sm:grid-cols-2">
         {posts.map((post) => (
           <BlogCard key={post.slug} post={post} />

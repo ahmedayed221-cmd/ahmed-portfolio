@@ -19,14 +19,16 @@ export default function AboutPage() {
   return (
     <Container className="py-16">
       <Reveal>
-        <p className="font-mono text-xs uppercase tracking-wider text-accent">About</p>
-        <h1 className="mt-3 max-w-2xl text-3xl font-semibold leading-tight tracking-tight text-foreground sm:text-4xl">
-          I build software by talking to it — then reading every line before it ships.
-        </h1>
+        <div className="text-scrim">
+          <p className="font-mono text-xs uppercase tracking-wider text-accent-text">About</p>
+          <h1 className="mt-3 max-w-2xl text-3xl font-semibold leading-tight tracking-tight text-foreground sm:text-4xl">
+            I build software by talking to it — then reading every line before it ships.
+          </h1>
+        </div>
       </Reveal>
 
       <div className="mt-14 grid gap-14 md:grid-cols-[1fr_280px]">
-        <div className="space-y-12">
+        <div className="text-scrim space-y-12">
           <Reveal>
             <section>
               <h2 className="font-mono text-sm uppercase tracking-wider text-muted">How I got here</h2>
@@ -63,7 +65,7 @@ export default function AboutPage() {
                   href="https://invomly.com"
                   target="_blank"
                   rel="noreferrer"
-                  className="text-foreground underline decoration-accent underline-offset-4 transition-colors hover:text-accent"
+                  className="text-foreground underline decoration-accent underline-offset-4 transition-colors hover:text-accent-text"
                 >
                   Invomly
                 </a>

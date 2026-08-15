@@ -7,8 +7,15 @@
   --border: #23262b;
   --border-hover: #34303f;
   --foreground: #e8e9ec;
-  --muted: #8b8f98;
+  /* #a3a7b0, not the original #8b8f98 — bumped for stronger contrast against
+     the animated background (8.26:1 vs background, 7.71:1 vs surface; both
+     clear WCAG AAA, giving headroom against the moving glow/particles). */
+  --muted: #a3a7b0;
   --accent: #7c6cf6;
+  /* Lighter than --accent specifically for text use — #7c6cf6 sits right at
+     the AA floor (4.5:1) against --surface, too tight once bloom/particles
+     brighten pixels behind it. #9a8bf8 clears 6.5:1+ against both surfaces. */
+  --accent-text: #9a8bf8;
   --accent-soft: rgba(124, 108, 246, 0.12);
 }
 
@@ -21,6 +28,7 @@
   --color-foreground: var(--foreground);
   --color-muted: var(--muted);
   --color-accent: var(--accent);
+  --color-accent-text: var(--accent-text);
   --color-accent-soft: var(--accent-soft);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
@@ -63,9 +71,9 @@ body {
   background: linear-gradient(
     180deg,
     transparent 0%,
-    rgba(124, 108, 246, 0.1) 45%,
-    rgba(124, 108, 246, 0.16) 50%,
-    rgba(124, 108, 246, 0.1) 55%,
+    rgba(124, 108, 246, 0.06) 45%,
+    rgba(124, 108, 246, 0.1) 50%,
+    rgba(124, 108, 246, 0.06) 55%,
     transparent 100%
   );
   transform: translateY(-100%);
@@ -93,6 +101,32 @@ body {
   opacity: 0.18;
   pointer-events: none;
   z-index: -1;
+}
+
+/*
+ * Subtle dark vignette behind text-heavy blocks that sit directly on the
+ * page background (not inside a bg-surface card), so the 3D scene/particles/
+ * grid behind them never compete with legibility. No hard edge — it's a
+ * soft radial falloff, not a visible panel.
+ */
+.text-scrim {
+  position: relative;
+  isolation: isolate;
+}
+
+.text-scrim::before {
+  content: "";
+  position: absolute;
+  inset: -1.5rem -1.25rem;
+  z-index: -1;
+  pointer-events: none;
+  border-radius: 1.5rem;
+  background: radial-gradient(
+    ellipse 100% 100% at 30% 30%,
+    rgba(8, 9, 11, 0.65) 0%,
+    rgba(8, 9, 11, 0.4) 50%,
+    transparent 80%
+  );
 }
 
 /* ---- Motion ---- */
